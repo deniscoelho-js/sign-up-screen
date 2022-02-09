@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$background: linear-gradient(to right, #aad5ff, #b4d6ff);
+$gray-color: #f6f6f6;
+// $background: linear-gradient(to-right, #aad5ff, #b4d6ff);
+
+.dflex {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  @extend .dflex;
+  padding-top: 7rem;
+  background-image: $background;
+  min-width: 100vh;
+  min-height: 100vh;
+  font-family: "Open sans", sans-serif;
+
+  .left {
+    border-radius: 25px 0px 0px 25px;
+    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-top: 1.7rem;
+    background-color: $gray-color;
+    height: 34.6rem;
+
+    img {
+      width: 2.5rem;
+    }
+
+    h1 {
+      padding-top: 0.5rem;
+    }
+
+    form {
+      padding-top: 2rem;
+
+      label {
+        text-transform: capitalize;
+      }
+      // estou aqui no input-------------------------------------------------------
+
+      .input-container {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 24rem;
+
+        .icon {
+          margin-top: 10px;
+          color: rgb(161, 158, 158);
+        }
+      }
+
+      .check-container {
+        display: flex;
+        margin-top: 0.6rem;
+
+        input[type="checkbox"] {
+          margin-right: 0.6rem;
+          margin-top: 0.2rem;
+          // visibility: hidden;
+        }
+      }
+
+      .check-text {
+        max-width: 16rem;
+        font-size: 0.7rem;
+      }
+
+      input[type="text"] {
+        border: none;
+        width: 22rem;
+        height: 2rem;
+        padding-left: 1.25rem;
+        background-color: $gray-color;
+        outline: none;
+      }
+
+      button {
+        margin-top: 1rem;
+        border-radius: 10px;
+        width: 10rem;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        background-image: linear-gradient(to right, #5edfff, #4a9ceb);
+        padding: 0.8rem;
+      }
+
+      .text-sign {
+        margin-top: 1rem;
+
+        a {
+          text-decoration: none;
+          color: #45a1c9;
+        }
+      }
+    }
+
+    .pass {
+      padding-top: 1rem;
+    }
+  }
+
+  .right {
+    img {
+      border-radius: 0px 25px 25px 0px;
+      width: 30rem;
+    }
+  }
+}
